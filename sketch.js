@@ -86,12 +86,6 @@ function draw(){
 
    slingshot.display();
 
-   textSize(18);
-   textFont("Georgia");
-   textStyle(BOLD);
-   text("Press space to get one more chance to play!!",10,20);
-   
-
 }
 
 function mouseDragged(){
@@ -101,17 +95,4 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
-}
-
-function keyPressed(){
-	if(keyCode === 32)
-	{
-		Matter.Body.setPosition(box.body,{x:235, y:420})
-		slingshot.attach(box.body);
-  }
-  
-  if(keycode === space){
-    box.x=200;
-    box.y=200;
-  }
 }
